@@ -1,0 +1,81 @@
+<!-- reactive form -->
+<div class="container form-div">
+    <h1>Create Your Account</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <!-- name field -->
+        <div class="form-group">
+            <input type="text" 
+            formControlName="name" 
+            class="form-control" 
+            placeholder="name"
+            [ngClass]="{'valid':submited && fD.name.errors}">
+            <div *ngIf="submited">
+                <!-- dispalying name errors -->
+                <div *ngIf="fD.name.errors">
+                    <div *ngIf="fD.name.errors.required" class="required">name is required.</div>
+                    <div *ngIf="fD.name.errors.pattern" class="errors">please enter fullname.</div>
+                </div>
+            </div>
+        </div>
+        <!-- email field -->
+        <div class="form-group">
+            <input type="email" 
+            formControlName="email"  
+             class="form-control" 
+             placeholder="email"
+             [ngClass]="{'valid':submited && fD.name.errors}">
+             <!-- dispalying email errors -->
+            <div *ngIf=" submited">
+                <div *ngIf="fD.email.errors">
+                    <div *ngIf="fD.email.errors.required" class="required">email is required.</div>
+                    <div *ngIf="fD.email.errors.pattern" class="errors">please enter correct email address.</div>
+                </div>
+            </div>
+        </div>
+       <!-- contact field -->
+        <div class="form-group">
+             <input type="tel" id="tel" 
+             formControlName="phoneNo" 
+             class="form-control " 
+             placeholder="contact"
+             [ngClass]="{'valid':submited && fD.name.errors}">
+             <!-- dispalying contact errors -->
+            <div *ngIf=" submited">
+                <div *ngIf="fD.phoneNo.errors">
+                    <div *ngIf="fD.phoneNo.errors.required" class="required">contact is required</div>
+                    <div *ngIf="fD.phoneNo.errors.pattern" class="errors">please enter correct phone number.</div>
+                 </div>
+            </div>
+        </div>
+        <!-- password field -->
+        <div class="form-group">
+           <input type="password" 
+            formControlName="password" 
+            class="form-control" 
+            placeholder="password"
+            [ngClass]="{'valid':submited && fD.name.errors}">
+            <!-- dispalying password errors -->
+            <div *ngIf=" submited">
+                <div *ngIf="fD.password.errors">
+                    <div *ngIf="fD.password.errors.required" class="required">password is required</div>
+                    <div *ngIf="fD.password.errors.pattern" class="errors">
+                        <ul style="list-style:square">
+                            <li>atleast 1 UPPERCASE letter</li>
+                            <li>atleast 1 lowercase letter </li>
+                            <li>any 1 special character(!@#$%^&*)</li>
+                            <li> atleast 1 digit</li>
+                            <li>password length should be 8 to 10</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="col-sm-3  btn btn-success" style="padding: 5px;" *ngIf="form.valid">Sign-Up</button>
+        <button type="submit" class="col-sm-3  btn btn-primary" style="padding: 5px;" *ngIf="!form.valid">Create</button>
+    </form>
+ </div>
+
+ 
+
+ <!-- end -->

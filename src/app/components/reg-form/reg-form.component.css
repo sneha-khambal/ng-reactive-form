@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+.form-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5%;
+  padding: 10x;
+  padding-left: 25%;
+  padding-right: 25%;
+   }
+ 
+ 
+  
+ 
+.gender span {
+ font-weight: 400;
+  margin-left: 5px;
+    padding-right: 15px;
+}
+.form-check{
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+ 
+.required{
+    color: rgb(114, 127, 160);
+    font-size: 10px;
+}
+
+.errors{
+    color: rgb(8, 126, 43);
+    font-size: 10px;
+}
+.valid{
+ 
+box-shadow: 0px 0px 1px 1px  rgb(255, 81, 0) ;
+ 
+}
+.form-div .form-group  {
+    margin-bottom: 50px;
+    
+}
+.form-div input{
+    padding: 5px;
+}
+
+
+ 
