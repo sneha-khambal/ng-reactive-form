@@ -1,12 +1,13 @@
 <!-- reactive form -->
-<div class="container form-div">
-    <h1>Create Your Account</h1>
+<div class="  form-div">
+    <h1 *ngIf="!form.valid" class="text-primary">Create Your Account</h1>
+    <h1 *ngIf= "form.valid " class="text-success">  Your Account is created</h1>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <!-- name field -->
         <div class="form-group">
             <input type="text" 
             formControlName="name" 
-            class="form-control" 
+            class="form-control " 
             placeholder="name"
             [ngClass]="{'valid':submited && fD.name.errors}">
             <div *ngIf="submited">
@@ -59,7 +60,7 @@
                 <div *ngIf="fD.password.errors">
                     <div *ngIf="fD.password.errors.required" class="required">password is required</div>
                     <div *ngIf="fD.password.errors.pattern" class="errors">
-                        <ul style="list-style:square">
+                        <ul style="list-style:square;margin-left: 15px;">
                             <li>atleast 1 UPPERCASE letter</li>
                             <li>atleast 1 lowercase letter </li>
                             <li>any 1 special character(!@#$%^&*)</li>
@@ -71,8 +72,8 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="col-sm-3  btn btn-success" style="padding: 5px;" *ngIf="form.valid">Sign-Up</button>
-        <button type="submit" class="col-sm-3  btn btn-primary" style="padding: 5px;" *ngIf="!form.valid">Create</button>
+        <button type="submit" class="col-sm-3  btn btn-success" style="padding: 5px; ;" *ngIf="form.valid">Sign-Up</button>
+        <button type="submit" class="col-sm-3  btn btn-primary" style="padding: 5px; " *ngIf="!form.valid">Create</button>
     </form>
  </div>
 
