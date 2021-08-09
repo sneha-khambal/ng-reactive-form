@@ -1,29 +1,25 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
  
 }
 
 .form-div{
-    padding: 10px;
-    margin-top: 3%;
-   margin-left: 30%;
-   align-items: center;
-   position: fixed;
-    border-radius: 2%;
-   box-shadow: 1px 2px 3px 2px rgb(213, 212, 212);
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+width: 550px;
+height: 600px;
+padding: 10px;
+margin-top: 3%;
+ margin-left: 25%;
+ border-radius: 2%;
+ box-shadow: 1px 2px 3px 2px rgb(213, 212, 212);
   
-
-   }
+ }
   
 .gender span {
  font-weight: 400;
   margin-left: 5px;
-    padding-right: 15px;
+padding-right: 15px;
 }
 
 .form-check{
@@ -32,13 +28,13 @@
 }
  
 .required{
-    color: rgb(114, 127, 160);
-    font-size: 10px;
+color: rgb(114, 127, 160);
+font-size: 10px;
 }
 
 .errors{
-    color: rgb(17, 148, 56);
-    font-size: 10px;
+color: rgb(17, 148, 56);
+font-size: 10px;
 }
 
 .valid{
@@ -46,13 +42,28 @@
  }
 
  .form-div .form-group  {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
+ 
+
   
 }
 .form-div input  {
-    padding: 5px;
-    width: 500px;
+padding: 5px;
+width: 500px;
 }
+
+
+ @media screen and (max-width:600px) {
+   .form-div{
+  margin-top: 10%;
+  margin-left: 2.5%;
+  width: 300px;
+  height: 300; }
+ .form-div input{
+width: 250px;
+padding: 2px; }
+ }
+
  
 
 
